@@ -4,8 +4,8 @@
 
 ## MỤC 1: THÔNG TIN SINH VIÊN
 
-- **Họ và tên sinh viên:** [Điền họ tên]
-- **Mã sinh viên:** [Điền MSV]
+- **Họ và tên sinh viên:** Trần Nhật Đông
+- **Mã sinh viên:** 24810320177
 - **Lớp:** D19QTANM1
 - **Tên Đề tài / Bài tập:** Bài 5.5 – Hệ thống quản lý quy trình xuất - nhập kho nguyên vật liệu
 
