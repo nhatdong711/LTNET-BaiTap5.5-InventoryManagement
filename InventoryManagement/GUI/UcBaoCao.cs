@@ -58,6 +58,7 @@ namespace InventoryManagement.GUI
             gbPhieu.Controls.Add(loc);
 
             SplitContainer split = new SplitContainer { Dock = DockStyle.Fill, SplitterDistance = 520 };
+            split.SizeChanged += (s2, e2) => { int d = split.Width * 45 / 100; if (d > 100) split.SplitterDistance = d; };
             split.Panel1.Controls.Add(gbCanhBao);
             split.Panel2.Controls.Add(gbPhieu);
 

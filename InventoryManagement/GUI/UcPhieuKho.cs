@@ -43,8 +43,10 @@ namespace InventoryManagement.GUI
             rdoNhap.CheckedChanged += (s, e) => DoiLoaiPhieu();
 
             // ---- Thêm dòng ----
-            GroupBox gbDong = new GroupBox { Text = "Thêm vật tư vào phiếu", Dock = DockStyle.Top, Height = 105 };
-            TableLayoutPanel tp = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 6, Padding = new Padding(6, 2, 6, 0) };
+            GroupBox gbDong = new GroupBox { Text = "Thêm vật tư vào phiếu", Dock = DockStyle.Top, Height = 120 };
+            TableLayoutPanel tp = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 6, RowCount = 2, Padding = new Padding(6, 2, 6, 0) };
+            tp.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            tp.RowStyles.Add(new RowStyle(SizeType.Absolute, 46));
             tp.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 70));
             tp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
             tp.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 75));

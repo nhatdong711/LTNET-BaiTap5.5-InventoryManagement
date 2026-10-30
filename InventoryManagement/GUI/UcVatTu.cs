@@ -59,6 +59,8 @@ namespace InventoryManagement.GUI
                 UiHelper.TaoNut("Làm mới", () => { txtMa.Clear(); txtTen.Clear(); txtDVT.Clear(); txtDinhMuc.Text = "10"; txtTon.Clear(); txtMa.Focus(); }));
 
             SplitContainer split = new SplitContainer { Dock = DockStyle.Fill, SplitterDistance = 680 };
+            split.FixedPanel = FixedPanel.Panel2;
+            split.SizeChanged += (s2, e2) => { int d = split.Width - 400; if (d > 150) split.SplitterDistance = d; };
             split.Panel1.Controls.Add(dgv);
             split.Panel1.Controls.Add(pnlTim);
             split.Panel2.Controls.Add(p);
