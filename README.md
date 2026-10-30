@@ -11,12 +11,12 @@
 
 ## MỤC 2: HƯỚNG DẪN CÀI ĐẶT & CHẠY DỰ ÁN
 
-**Yêu cầu:** Visual Studio 2022 (workload *.NET desktop development*), SQL Server + SSMS.
+**Yêu cầu:** Visual Studio 2022 (workload *.NET desktop development*, đã kèm SQL Server Express LocalDB).
 
-1. Mở SQL Server Management Studio (SSMS), chạy file `Database/ScriptDB.sql` để khởi tạo CSDL `InventoryDB` và dữ liệu mẫu.
-2. Mở file `InventoryManagement.sln` bằng Visual Studio 2022.
-3. Mở file `InventoryManagement/App.config`, sửa `Data Source` trong chuỗi kết nối `InventoryDB` cho phù hợp với máy cá nhân (ví dụ `.\SQLEXPRESS` hoặc `(localdb)\MSSQLLocalDB`).
-4. Build & Run dự án (F5).
+1. Mở file `InventoryManagement.sln` bằng Visual Studio 2022.
+2. Build & Run dự án (F5). Ở lần chạy đầu, chương trình tự kiểm tra: nếu chưa có CSDL `InventoryDB` thì tự chạy file `Database/ScriptDB.sql` để tạo bảng và dữ liệu mẫu (lớp `DAL/DbInit.cs`).
+3. Mặc định chuỗi kết nối dùng `(localdb)\MSSQLLocalDB`. Nếu muốn dùng SQL Server khác, sửa `Data Source` trong `InventoryManagement/App.config` (ví dụ `.\SQLEXPRESS`).
+4. Có thể chạy thủ công `Database/ScriptDB.sql` bằng SQL Server Management Studio (SSMS) nếu muốn tạo lại CSDL từ đầu.
 
 ## Cấu trúc thư mục
 
